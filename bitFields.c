@@ -49,16 +49,6 @@ unsigned long getBitFldU(int bs,int len,unsigned long val) {
 	unsigned long mask = (1UL << len) - 1;
 	unsigned long extractedField = (val >> bs) & mask;
 	return extractedField;
-
-	// 		make a mask that has len 1's
-	// 		Shift that mask left so it's leftmost 1 starts at bs
-
-
-	//      bitwise and the mask and val to isolate the bit field bits
-	//		Shift the result to the right so that the rightmost bit of the bit field is bit 0
-	//			Note that shift right pads to the left with the sign bit if the field is signed, but
-	//			for unsigned, it will pad to the left with 0
-	return 0; // replace this with the correct code
 }
 
 void setBitFld(int bs,int len,unsigned long new,unsigned long *val) {
